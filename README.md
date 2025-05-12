@@ -1,91 +1,83 @@
+# 🤖 Bot de Finanças no WhatsApp
 
-# Bot de Finanças
+Um bot inteligente para controle financeiro pessoal via WhatsApp, desenvolvido com `whatsapp-web.js` e `Node.js`.
 
-Este é um bot de WhatsApp desenvolvido com Node.js para ajudar no controle de finanças pessoais. O bot permite registrar ganhos e gastos, gerar um resumo financeiro mensal, e realizar exportações dos dados financeiros.
+## ✨ Funcionalidades
 
-## Funcionalidades
+- Registro de **ganhos**, **gastos** e **investimentos**
+- Resumo diário automático às 20h
+- Consulta de **saldo mensal**
+- Busca de gastos por descrição
+- Consulta de **resumo por mês**
+- Interface 100% via mensagens no WhatsApp
 
-- **Registrar ganhos**: Envie uma mensagem com o valor e descrição do ganho.
-- **Registrar gastos**: Envie uma mensagem com o valor e descrição do gasto.
-- **Resumo financeiro**: O bot pode fornecer um resumo completo dos ganhos e gastos do mês atual.
-- **Exportação de dados**: O bot pode gerar um relatório financeiro em formato PDF ou Excel.
+## 📦 Tecnologias
 
-## Como Funciona
+- [Node.js](https://nodejs.org)
+- [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js)
+- [node-cron](https://www.npmjs.com/package/node-cron)
+- [qrcode-terminal](https://www.npmjs.com/package/qrcode-terminal)
+- [fs (file system)](https://nodejs.org/api/fs.html)
 
-1. **Ganhos**: Para registrar um ganho, envie a seguinte mensagem:
+## ⚙️ Instalação
 
-   ```
-   Ganhei [valor] [descrição] [categoria]
-   ```
+```bash
+# Clone o repositório
+git clone https://github.com/MuriloLodi/botfinancas.git
+cd botfinancas
 
-   Exemplo: `Ganhei 1000 Mercado pagamento Salário`.
+# Instale as dependências
+npm install
+```
 
-2. **Gastos**: Para registrar um gasto, envie a seguinte mensagem:
+> ⚠️ **Importante**: certifique-se de que o Chrome ou Chromium esteja instalado em seu sistema, pois o `whatsapp-web.js` usa o Puppeteer internamente.
 
-   ```
-   Gastei [valor] [descrição] [categoria]
-   ```
+## 🚀 Como executar
 
-   Exemplo: `Gastei 70 Compra lazer`.
+```bash
+node index.js
+```
 
-3. **Resumo Financeiro**: Envie a mensagem `Resumo` para receber um resumo do mês atual.
+Escaneie o QR Code com seu WhatsApp e pronto! O bot estará online.
 
-4. **Exportar PDF**: Envie `Exportar PDF` para gerar um relatório financeiro em PDF.
+## 💬 Comandos disponíveis
 
-5. **Exportar Excel**: Envie `Exportar Excel` para gerar um relatório financeiro em formato Excel.
+```
+💰 Ganhei [valor] [descrição]
+💸 Gastei [valor] [descrição]
+📈 Investi [valor] [descrição]
+📊 Resumo — Mostra os dados do mês atual
+📅 Resumo [ano-mês] — Exemplo: resumo 2025-05
+💼 Saldo — Mostra o saldo do mês atual
+🔎 Buscar [termo] — Ex: buscar mercado
+❓ Ajuda — Mostra todos os comandos disponíveis
+```
 
-## Pré-requisitos
+## 💡 Exemplo de uso
 
-Certifique-se de ter os seguintes programas e bibliotecas instalados:
+```
+ganhei 1000 salário
+gastei 200 mercado
+investi 300 tesouro direto
+resumo
+saldo
+buscar mercado
+```
 
-- **Node.js** (versão 12 ou superior)
-- **NPM** (gerenciador de pacotes do Node.js)
-- **WhatsApp Web.js** (Biblioteca para interação com o WhatsApp)
-- **MongoDB** (para armazenar os dados de forma persistente)
-- **PDFKit** (para gerar arquivos PDF)
-- **ExcelJS** (para gerar arquivos Excel)
+## 🗂 Armazenamento
 
-## Como Rodar
+Os dados são armazenados em um arquivo local: `dados_usuarios.json`.
 
-1. Clone o repositório:
+> Em breve: suporte a banco de dados com MongoDB.
 
-   ```bash
-   git clone https://github.com/MuriloLodi/botfinancas.git
-   ```
+## 🧠 Contribuição
 
-2. Navegue para o diretório do projeto:
+Sinta-se à vontade para sugerir melhorias ou abrir PRs. Toda ajuda é bem-vinda!
 
-   ```bash
-   cd botfinancas
-   ```
+## 📄 Licença
 
-3. Instale as dependências:
+[MIT](./LICENSE)
 
-   ```bash
-   npm install
-   ```
+---
 
-4. Crie um arquivo `config.js` para armazenar as configurações do bot (exemplo abaixo):
-
-   ```javascript
-   module.exports = {
-     whatsappSessionName: 'financas-bot', // Nome da sessão do WhatsApp
-     mongoURI: 'sua_conexao_do_MongoDB',  // Conexão com o banco MongoDB
-   };
-   ```
-
-5. Inicie o bot:
-
-   ```bash
-   node bot.js
-   ```
-
-6. O bot gerará um QR code no terminal, escaneie-o no WhatsApp Web para conectar o bot à sua conta.
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
-
-## Contribuições
-
-Contribuições são bem-vindas! Se você tiver sugestões ou correções, por favor, envie um pull request.
+Feito com 💙 por [Murilo Henrique Lodi](https://github.com/MuriloLodi)
