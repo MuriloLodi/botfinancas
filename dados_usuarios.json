@@ -2,69 +2,32 @@
   "status@broadcast": {
     "2025-05": {
       "ganhos": [],
-      "gastos": []
+      "gastos": [],
+      "investimentos": []
     }
   },
-  "554599939155@c.us": {
+  "554591539525@c.us": {
     "2025-05": {
       "ganhos": [
         {
-          "valor": 700,
-          "descricao": "puta",
-          "categoria": "categoria: trabalho"
+          "valor": 200,
+          "descricao": "sem descrição",
+          "data": "2025-05-12"
         }
       ],
       "gastos": [
         {
-          "valor": 300,
+          "valor": 50,
           "descricao": "ifood",
-          "categoria": "lazer"
+          "data": "2025-05-12"
         },
         {
-          "valor": 600,
-          "descricao": "pc",
-          "categoria": "lazer"
-        },
-        {
-          "valor": 400,
-          "descricao": "top",
-          "categoria": "djdje"
-        },
-        {
-          "valor": 300,
-          "descricao": "pc",
-          "categoria": "moradia"
+          "valor": 30,
+          "descricao": "shopping",
+          "data": "2025-05-12"
         }
-      ]
-    }
-  },
-  "120363176619658717@newsletter": {
-    "2025-05": {
-      "ganhos": [],
-      "gastos": []
-    }
-  },
-  "120363176014092785@newsletter": {
-    "2025-05": {
-      "ganhos": [],
-      "gastos": []
-    }
-  },
-  "5511987282507@c.us": {
-    "2025-05": {
-      "ganhos": [],
-      "gastos": [
-        {
-          "valor": 300,
-          "descricao": "ifood",
-          "categoria": "lazer"
-        },
-        {
-          "valor": 70,
-          "descricao": "puta",
-          "categoria": "moradia"
-        }
-      ]
+      ],
+      "investimentos": []
     }
   }
 }
